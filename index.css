@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap');
+
+html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: #141e3c;
+    font-family: Urbanist;
+}
+
+/*
+.wrapper{
+    background-color: red;
+}
+*/
+.wrapper .header{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 2rem;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.wrapper .header .title{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.wrapper .header .score{
+    width: 10%;
+    margin: 0.8rem 12rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.wrapper .header .score span{
+    color: #141e3c;
+    font-weight: bold;
+    margin-top: -0.6rem;
+}
+
+.wrapper .header .score .player-score{
+    color: grey;
+    font-size: 2rem;
+    margin-top: 0;
+}
