@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
     <title> Rock Paper Scissors</title>
 </head>
 <body>
@@ -23,32 +24,87 @@
         </div>
 
         <div class="game">
-            <div class="container paper">
+            <div class="container paper" onclick="pickHand('paper')">
                 <div class="button">
                     <img src="assets/icon-paper.svg" alt="Paper">
                 </div>
             </div>
 
-            <div class="container scissors">
+            <div class="container scissors" onclick="pickHand('scissors')">
                 <div class="button">
                     <img src="assets/icon-scissors.svg" alt="Scissors">
                 </div>
             </div>
 
-            <div class="container rock">
+            <div class="container rock" onclick="pickHand('rock')">
                 <div class="button">
                     <img src="assets/icon-rock.svg" alt="Rock">
                 </div>
             </div>
         </div>
 
-    </div>
-   
-    <div class="howtoplay">
-        <span> HOW TO PLAY </span>
-        <div class="instructions">
+        <div class="match">
+            <div class="user">
+                <span> You choosed </span>
+
+                <div class="container paper">
+                    <div class="button">
+                        <img src="assets/icon-paper.svg" alt="Paper">
+                    </div>
+                </div>
+    
+                <div class="container scissors">
+                    <div class="button">
+                        <img src="assets/icon-scissors.svg" alt="Scissors">
+                    </div>
+                </div>
+    
+                <div class="container rock">
+                    <div class="button">
+                        <img src="assets/icon-rock.svg" alt="Rock">
+                    </div>
+                </div>
+                
+            </div>
             
+            <div class="decision">
+                <span> You win! </span>
+                <button id="newGame"> Play again </button>
+            </div>
+            
+            <div class="computer">
+                <span> Computer choosed </span>
+
+                <div class="container paper">
+                    <div class="button">
+                        <img src="assets/icon-paper.svg" alt="Paper">
+                    </div>
+                </div>
+    
+                <div class="container scissors">
+                    <div class="button">
+                        <img src="assets/icon-scissors.svg" alt="Scissors">
+                    </div>
+                </div>
+    
+                <div class="container rock">
+                    <div class="button">
+                        <img src="assets/icon-rock.svg" alt="Rock">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="howtoplay">
+            <span> HOW TO PLAY </span>
+            <div class="instructions">
+                No diré no lloréis, pues no todas las lagrimas son amargas. Muchos de los que viven merecen morir y algunos de los que mueren merecen la vida. ¿Puedes devolver la vida? Entonces no te apresures a dispensar la muerte, pues ni el más sabio conoce el fin de todos los caminos. Muchos de los que viven merecen morir y algunos de los que mueren merecen la vida. ¿Puedes devolver la vida? Entonces no te apresures a dispensar la muerte, pues ni el más sabio conoce el fin de todos los caminos. Es sabiduría reconocer la necesidad, cuando todos los otros cursos ya han sido considerados, aunque pueda parecer locura a aquellos que se atan a falsas esperanzas. Solo tú puedes decidir con el tiempo que te has dado.
+    
+                La antigua sabiduría fue olvidada en Occidente. Los reyes hicieron tumbas más hermosas que las casas de los vivos, dando más valor al nombre de sus antepasados que al de sus hijos. ¡No puedes pasar!. Sé muchas cosas que solo los sabios saben. Uno debe seguir el camino que la necesidad escoge. La antigua sabiduría fue olvidada en Occidente. Los reyes hicieron tumbas más hermosas que las casas de los vivos, dando más valor al nombre de sus antepasados que al de sus hijos.
+            </div>
         </div>
     </div>
+   
 </body>
 </html>

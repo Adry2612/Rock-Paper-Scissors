@@ -16,6 +16,7 @@ html{
 .wrapper .header{
     display: flex;
     justify-content: space-between;
+    align-content: center;
     margin: 2rem 2rem;
     border: 1px solid white;
     border-radius: 5px;
@@ -29,10 +30,11 @@ html{
     display: flex;
     flex-direction: column;
     line-height: 1;
+    cursor: pointer;
 }
 
 .wrapper .header .score{
-    width: 10%;
+    width: 6rem;
     margin: 0.8rem 12rem;
     display: flex;
     flex-direction: column;
@@ -76,6 +78,18 @@ html{
     align-items: center;
     justify-content: center;
     margin: -4rem 4.5rem 2.6rem;
+    transition: all 0.2 ease;
+}
+
+.wrapper .container{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -4rem 4.5rem 2.6rem;
+    transition: all 0.2 ease;
 }
 
 .wrapper .paper{
@@ -103,4 +117,102 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Choose winner */
+.wrapper .match{
+    display: none;
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    color: wheat;
+}
+
+.wrapper .match div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper .match .user .container{
+    display: none;
+}
+
+.wrapper .match .user .rock{
+    display: flex;
+}
+
+.wrapper .match .decision span{
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.wrapper .match .decision button{
+    border-radius: 5px;
+    border: none;
+    width: 6rem;
+    font-size: 1.2rem;
+    box-shadow: inset;
+}
+
+.wrapper .match .computer .container{
+    display: none;
+}
+
+.wrapper .match .computer .rock{
+    display: flex;
+}
+
+/* How to play */
+.wrapper .howtoplay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.wrapper .howtoplay span{
+    font-size: 1.6rem;
+    margin: -0.8rem 0 1rem 0;
+    padding: 0 1rem 0 1rem;
+    background-color: #141e3c;
+    color: #ea9b10;
+}
+
+.wrapper .howtoplay .instructions{
+    padding: 1.6rem;
+    color: white;
+}
+
+@media screen and (max-width: 850px){
+    .wrapper{
+        width: 100vw;
+    }
+
+    /* Puntuación */ 
+    .wrapper .header .score{
+        margin: 0.8rem 10%;
+    }
+
+    /* Buttons */
+
+    .wrapper .game{
+        margin: auto;
+    }
+
+    .wrapper .container{
+        width: 8rem;
+        height: 8rem;
+        margin: -4rem 4.5rem 2.6rem;
+    }
+
+    .wrapper .container .button{
+        width: 6rem;
+        height: 6rem;
+    }
 }
