@@ -46,10 +46,61 @@ html{
     color: #141e3c;
     font-weight: bold;
     margin-top: -0.6rem;
+    letter-spacing: 3px;
 }
 
 .wrapper .header .score .player-score{
     color: grey;
     font-size: 2rem;
     margin-top: 0;
+}
+
+.wrapper .game{
+    background-image: url("assets/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 15rem;
+    width: 50rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
+
+.wrapper .container{
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -4rem 4.5rem 2.6rem;
+}
+
+.wrapper .paper{
+    background-color: #4c69f5;
+    box-shadow: 5rem black;
+    margin-right: 4rem;
+}
+
+.wrapper .scissors{
+    background-color: #ea9b10;
+    box-shadow: 5rem hsl(229,89,30);
+}
+
+.wrapper .rock{
+    background-color: #be2740;
+    box-shadow: 5rem hsl(229,89,30);
+    margin-top: 2rem;
+}
+
+.wrapper .container .button{
+    border-radius: 50%;
+    background-color: white;
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
