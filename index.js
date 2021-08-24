@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // New game.
     let playAgain = document.querySelector('#newGame');
-    playAgain.addEventListener('click', playAgain);
+    playAgain.addEventListener('submit', playAgain);
 
 });
 
@@ -31,15 +31,19 @@ const pickHand = (hand) => {
     // Print random hand.
     let computer = document.querySelector('.computer')
     computer.appendChild(printHand(hands[randomHand]));
+
+    chooseWinner(hand, hands[randomHand])
 }
 
 function printHand(hand){
+    // Create the main buttons. 
     let container = document.createElement("div");
     container.classList.add('container')
     let butt = document.createElement("div");
     butt.classList.add('button');
     let img = document.createElement("img");
 
+    // We add the icon to the button in each case.
     if (hand == 'paper'){
         container.classList.add('paper');
         img.src = "assets/icon-paper.svg";
@@ -54,14 +58,58 @@ function printHand(hand){
         img.alt = "Rock";
     }
     
+    // Append the icon and the button to the index.
     butt.appendChild(img);
     container.appendChild(butt);
 
     return container;
 }
 
-function chooseWinner(){
+function chooseWinner(user, computer){
+    let winner = 'tie';
+
+    // Depending to the user choice, calculate the winner of the game. 
+    switch (user){
+        case 'paper':
+            if (computer == 'rock'){
+                winner = 'true';
+            } else if(computer == 'scissors'){
+                winner = 'false';
+            } 
+
+            break;
+        case 'rock':
+            if (computer == 'paper'){
+                winner = 'false';
+            } else if (computer == 'scissors'){
+                winner = 'true';
+            }
+            break;
+
+            case 'scissors':
+                if (computer == 'rock'){
+                    winner = 'false';
+                } else if(computer == 'paper'){
+                    winner = 'true';
+                break;
+            }
+    }
     
+    // Create the span with the result.
+    let result = document.createElement("span");
+
+    // Change the text depending of the result.
+    if (winner === 'true'){
+        result.innerHTML = 'You win!';
+        document.querySelector('.player-score').innerHTML ++;
+    } else if (winner === 'false'){
+        result.innerHTML = 'You lose...';
+    } else if (winner === 'tie'){
+        result.innerHTML = 'It\'s a tie';
+    }
+
+    let decision = document.querySelector('.decision');
+    decision.prepend(result);
 }
 
 function playAgain(event){
