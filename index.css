@@ -93,18 +93,18 @@ html{
 }
 
 .wrapper .paper{
-    background-color: #4c69f5;
+    background: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     box-shadow: 5rem black;
     margin-right: 4rem;
 }
 
 .wrapper .scissors{
-    background-color: #ea9b10;
+    background: radial-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
     box-shadow: 5rem hsl(229,89,30);
 }
 
 .wrapper .rock{
-    background-color: #be2740;
+    background: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
     box-shadow: 5rem hsl(229,89,30);
     margin-top: 2rem;
 }
@@ -137,11 +137,13 @@ html{
 }
 
 .wrapper .match .user .container{
-    display: none;
+    display: flex;
+    margin-top: 2rem;
 }
 
-.wrapper .match .user .rock{
+.wrapper .match .computer .container{
     display: flex;
+    margin-top: 2rem;
 }
 
 .wrapper .match .decision span{
@@ -155,14 +157,11 @@ html{
     width: 6rem;
     font-size: 1.2rem;
     box-shadow: inset;
+    transition: background-color 0.3s ease;
 }
 
-.wrapper .match .computer .container{
-    display: none;
-}
-
-.wrapper .match .computer .rock{
-    display: flex;
+.wrapper .match .decision button:hover{
+    background-color: #afafaf;
 }
 
 /* How to play */
