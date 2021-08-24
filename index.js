@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', function(){
     let title = document.querySelector('.title');
     title.addEventListener('click', lizardSpock(title));
     */
-
-    // New game.
-    let playAgain = document.querySelector('#newGame');
-    playAgain.addEventListener('submit', playAgain);
-
 });
 
 const pickHand = (hand) => {
@@ -39,6 +34,7 @@ function printHand(hand){
     // Create the main buttons. 
     let container = document.createElement("div");
     container.classList.add('container')
+    container.classList.add('result')
     let butt = document.createElement("div");
     butt.classList.add('button');
     let img = document.createElement("img");
@@ -97,6 +93,7 @@ function chooseWinner(user, computer){
     
     // Create the span with the result.
     let result = document.createElement("span");
+    result.id = 'result';
 
     // Change the text depending of the result.
     if (winner === 'true'){
@@ -112,9 +109,7 @@ function chooseWinner(user, computer){
     decision.prepend(result);
 }
 
-function playAgain(event){
-    event.preventDefault();
-    
+function newGame(){
     // Select the board and hide it.
     let board = document.querySelector('.game')
     board.style.display = "flex";
@@ -122,6 +117,14 @@ function playAgain(event){
     // Select the game decision and show it.
     let match = document.querySelector('.match')
     match.style.display = 'none'
+
+    // Each time the game is reset we delete everything created before.
+    let container = document.querySelectorAll('.result');
+    let decision = document.querySelector('#result').remove()
+
+    container.forEach(element => {
+        element.remove()
+    });
 }
 
 /*
